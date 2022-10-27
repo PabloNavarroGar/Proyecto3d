@@ -21,7 +21,7 @@ public class AñoBisiesto {
         //Vamos a hacer un bucle hasta que el usuario introduzca el 0, si introduce un año
         //negativo se pone positivo, si mayor que 0 y positivo, el programa tiene que decir
         //si es bisiesto o no, condicion para que sea bisiesto, 
-        // tiene que ser divisible por 4 y no divisible por 100 o divisible por 400 ||
+        // tiene que ser divisible por 4 y no divisible(!=)(ES DIVISIBLE)  por 100 o divisible por 400 ||
         //divisible por 4 Y (no divisible por 100  o divisible por 400  )
         int anio;
 
@@ -52,7 +52,7 @@ public class AñoBisiesto {
                 JOptionPane.showMessageDialog(null, "Haz seleccionado 0, sales del pograma");
             } else {
 
-                if ((anio % 4 == 0) && (anio % 100 != 0 || (anio % 400 == 0))) {
+                if ((anio % 4 == 0) && (anio % 100 != 0 || anio % 400 == 0)) {
                     JOptionPane.showMessageDialog(null, +anio + " es bisiesto");
 
                 } else {

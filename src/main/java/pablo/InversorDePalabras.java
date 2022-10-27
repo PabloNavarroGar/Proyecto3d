@@ -21,27 +21,31 @@ public class InversorDePalabras {
         //Si le introduciomos la palabra tomate, la pone al reves etamot
 
         String palabra;
-        int invertida = 0;
+        String invertida = "";
         do {
             palabra = JOptionPane.showInputDialog(null, "Introduce la palabra");
 
+             if(palabra.equals("salir")) {
+                 
+             JOptionPane.showMessageDialog(null,
+                     palabra);
+                 
+             }
+             else{
             JOptionPane.showMessageDialog(null, "Tu palabra es : " + palabra);
+              //la i es igual a la palabra la longitud, si i es mayor a 0(que es la palabra) resta 1
+            for (int i = palabra.length() ; i > 0; i--) {
+                  //declaramos la invertida es mas iugal a la palabra con el char y la i restando1
+                invertida += palabra.charAt(i-1);
 
-            for (int i = palabra.length() - 1; i < 10; i--) {
-
-                invertida += palabra.charAt(i);
-
-                if ("tomate".equals(palabra)) {
-
-                    invertida--;
-
-                }
+//               
 
             }
+             }
 
-            JOptionPane.showMessageDialog(null, "tomate al reves es" + invertida);
+            JOptionPane.showMessageDialog(null, "tomate al reves es " + invertida);
 
-        } while (palabra.equals("salir") == true || palabra.equals(palabra) == false);
+        } while (palabra.equals("salir") == true || palabra.equals(palabra));
 
     }
 
